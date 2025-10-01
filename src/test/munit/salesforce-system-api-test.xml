@@ -18,8 +18,7 @@
       <munit:flow-ref name="get:\health:salesforce-system-api-config"/>
     </munit:execution>
     <munit:validation>
-      <munit:assert-that expression="#[(payload default "") as String]"
-                         is="#['api is alive now']"/>
+      <munit:assert-that expression="#[(payload default '') as String]" is="#['api is alive now']"/>
     </munit:validation>
   </munit:test>
 
