@@ -11,14 +11,14 @@ on:
 jobs:
   build-on-pr:
     if: github.event_name == 'pull_request'
-    uses: your-org/mule-deployments/.github/workflows/ci-build.yml@main
+    uses: anish-salesforce/mule-deployments/.github/workflows/ci-build.yml@main
     secrets:
       CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
       CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
 
   deploy-on-merge:
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
-    uses: your-org/mule-deployments/.github/workflows/cd-deploy.yml@main
+    uses: anish-salesforce/mule-deployments/.github/workflows/cd-deploy.yml@main
     secrets:
       CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
       CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
