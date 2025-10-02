@@ -13,8 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.maven.plugin.version>4.7.1</mule.maven.plugin.version>
-		<munit.version>3.1.0</munit.version>
+		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
+		<munit.version>3.5.0</munit.version>
 	</properties>
 
 	<build>
@@ -119,12 +119,14 @@
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
 			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
 			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
