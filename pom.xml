@@ -4,7 +4,7 @@
 
 	<groupId>c103b78c-9a8d-43dc-b5d6-d3e380c81d38</groupId>
 	<artifactId>demo-application</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.4</version>
 	<packaging>mule-application</packaging>
 
 	<name>salesforce-system-api</name>
@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.9.0</app.runtime>
-		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
 		<munit.version>3.5.0</munit.version>
 	</properties>
 
@@ -22,12 +22,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.5.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>4.5.3</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
@@ -35,7 +35,7 @@
 						<provider>MC</provider>
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
-						<muleVersion>4.4.0</muleVersion>
+						<muleVersion>4.9.0</muleVersion>
 						<server>ca.anypoint.credentials</server>
 						<applicationName>${project.artifactId}</applicationName>
 						<replicas>1</replicas>
@@ -99,7 +99,7 @@
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-http-connector</artifactId>
-			<version>1.10.3</version>
+			<version>1.10.5</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
@@ -111,7 +111,7 @@
 		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-apikit-module</artifactId>
-			<version>1.11.3</version>
+			<version>1.11.6</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<!-- MUnit test dependencies -->
@@ -150,6 +150,7 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<!-- START: needed for ch2 deployment -->
 		<repository>
             <id>ca.anypoint.credentials</id>
             <name>Private Exchange repository</name>
