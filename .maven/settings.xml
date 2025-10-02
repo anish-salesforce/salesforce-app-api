@@ -1,4 +1,8 @@
 <settings>
+    <pluginGroups>
+        <pluginGroup>org.mule.tools</pluginGroup>
+    </pluginGroups>
+
     <servers>
         <server>
             <id>ca.anypoint.credentials</id>
