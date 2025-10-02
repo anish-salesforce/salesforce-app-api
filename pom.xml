@@ -4,7 +4,7 @@
 
 	<groupId>c103b78c-9a8d-43dc-b5d6-d3e380c81d38</groupId>
 	<artifactId>demo-application</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<packaging>mule-application</packaging>
 
 	<name>salesforce-system-api</name>
@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.0</app.runtime>
-		<mule.maven.plugin.version>4.2.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -22,12 +22,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.5.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>4.2.0</version>
+				<version>4.5.3</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudhub2Deployment>
@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-http-connector</artifactId>
-			<version>1.10.3</version>
+			<version>1.10.5</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
@@ -77,7 +77,7 @@
 		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-apikit-module</artifactId>
-			<version>1.11.3</version>
+			<version>1.11.6</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
