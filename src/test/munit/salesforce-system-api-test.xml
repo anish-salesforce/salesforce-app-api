@@ -32,17 +32,20 @@ output application/json
   id: "0015g00000XYZ123AAZ",
   success: true,
   errors: []
-} as Object {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
+}]]></ee:set-payload>
       </ee:message>
     </ee:transform>
   </flow>
 
+  <!-- Updated MUnit tests for Java 17 compatibility -->
   <munit:test name="health_flow_returns_alive" description="GET /health returns alive message">
     <munit:execution>
       <munit:flow-ref name="test-health-flow"/>
     </munit:execution>
     <munit:validation>
-      <munit:assert-that expression="#[(payload default '') as String]" is="#['api is alive now']"/>
+      <!-- Updated assertion syntax for Java 17 compatibility -->
+      <munit:assert-that expression="#[(payload default '') as String]" 
+                      is="#['api is alive now']"/>
     </munit:validation>
   </munit:test>
 
@@ -51,6 +54,7 @@ output application/json
       <munit:flow-ref name="test-post-accounts-flow"/>
     </munit:execution>
     <munit:validation>
+      <!-- Java 17 compatible assertions -->
       <munit:assert-that expression="#[(payload.id default null)]" is="#[(value) -> value != null]"/>
       <munit:assert-that expression="#[(payload.success default false)]" is="#[(value) -> value == true]"/>
       <munit:assert-that expression="#[(payload.errors default []) size]" is="#[(value) -> value == 0]"/>
@@ -58,4 +62,3 @@ output application/json
   </munit:test>
 
 </mule>
-
