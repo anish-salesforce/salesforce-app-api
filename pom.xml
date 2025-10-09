@@ -4,7 +4,7 @@
 
 	<groupId>c103b78c-9a8d-43dc-b5d6-d3e380c81d38</groupId>
 	<artifactId>demo-application</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<packaging>mule-application</packaging>
 
 	<name>salesforce-system-api</name>
